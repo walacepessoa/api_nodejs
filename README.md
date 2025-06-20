@@ -38,7 +38,9 @@ Ctrl+Shift+P → “Terminal: Select Default Profile” → escolha Git Bash.
 No terminal:
 
 mkdir meu-projeto
+
 cd meu-projeto
+
 npm init -y
 
 Cria um package.json básico.
