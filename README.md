@@ -46,15 +46,35 @@ Cria um package.json básico.
 5. Instalar os pacotes Express, sequelize e também o driver do banco SQLite:
 npm install express sequelize sqlite3 body-parser
 
-6. Iniciar o servidor:
+6. Criar a estrutura de arquivos:
+api-rest/
+│
+├── models/                  ← Modelos Sequelize (definem as tabelas)
+│   ├── cliente.js           ← Modelo Cliente
+│   ├── produto.js           ← Modelo Produto
+│   └── compra.js            ← Modelo Compra
+│
+├── routes/                  ← Rotas da API
+│   ├── clientes.js          ← Endpoints /clientes
+│   ├── produtos.js          ← Endpoints /produtos
+│   └── compras.js           ← Endpoints /compras
+│
+├── database.js              ← Conexão com o SQLite usando Sequelize
+├── server.js                ← Arquivo principal que sobe a API
+├── package.json             ← Configuração do projeto e dependências
+├── package-lock.json        ← (Gerado automaticamente pelo npm)
+└── database.sqlite          ← (Gerado automaticamente pelo Sequelize)
+└── testes.http              ← Arquivo post para inclusão dos dados no banco
+
+7. Iniciar o servidor:
 node server.js
 
-7. A URL base da API:
+8. A URL base da API:
 http://localhost:3000
 
 Banco de dados sqlite
 --------------
-8. Como instalar a extensão REST Client no Visual Studio Code.
+9. Como instalar a extensão REST Client no Visual Studio Code.
 🔹 1. Abrir o Visual Studio Code
 🔹 2. Ir até o menu de extensões
 Clique no ícone de quadrado com 4 blocos na barra lateral esquerda
@@ -66,9 +86,9 @@ Ela aparecerá com o autor "Huachao Mao".
 🔹 4. Clique em Instalar
 Aguarde a instalação.
 
-9. Criar o arquivo testes.http que irá criar os dados no banco de dados.
+10. Criar o arquivo testes.http que irá criar os dados no banco de dados.
 
-10. Como usar o REST Client
+11. Como usar o REST Client
 Abra o arquivo no Visual Studio Code.
 Clique em "Send Request" acima de cada requisição para incluir os dados.
 
