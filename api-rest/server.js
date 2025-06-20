@@ -1,0 +1,36 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const sequelize = require('./database');
+
+// Importando modelos
+const Cliente = require('./models/cliente');
+const Produto = require('./models/produto');
+const Compra = require('./models/compra');
+
+// Importando rotas
+const clientesRoute = require('./routes/clientes');
+const produtosRoute = require('./routes/produtos');
+const comprasRoute = require('./routes/compras');
+
+const app = express();
+app.use(bodyParser.json());
+
+// Associando as rotas
+app.use('/clientes', clientesRoute);
+app.use('/produtos', produtosRoute);
+app.use('/compras', comprasRoute);
+
+// Definindo relacionamentos (foreign keys)
+Compra.belongsTo(Cliente, { foreignKey: 'cliente_id' });
+Compra.belongsTo(Produto, { foreignKey: 'produto_id' });
+
+// Cria o banco de dados e inicia o servidor
+sequelize.sync().then(() => {
+  console.log('📦 Banco de dados sincronizado');
+
+  app.listen(3000, () => {
+    console.log('🚀 Servidor rodando em: http://localhost:3000');
+  });
+}).catch(err => {
+  console.error('❌ Erro ao conectar com o banco de dados:', err);
+});

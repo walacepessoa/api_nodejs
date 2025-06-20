@@ -1,0 +1,47 @@
+### ✅ Criar cliente
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Walace Pessoa",
+  "email": "walacepessoa@gmail.com",
+  "senha": "1000"
+}
+
+### 🔍 Listar clientes
+GET http://localhost:3000/clientes
+
+###
+
+### ✅ Criar produto
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+{
+  "nome": "Plano AB",
+  "descricao": "Plano com desconto de 10%",
+  "preco": 150.00
+}
+
+### 🔍 Listar produtos
+GET http://localhost:3000/produtos
+
+###
+
+### ✅ Criar compra (verifique os IDs antes)
+POST http://localhost:3000/compras
+Content-Type: application/json
+
+{
+  "cliente_id": 1,
+  "produto_id": 1
+}
+
+### 🔍 Listar todas as compras
+GET http://localhost:3000/compras
+
+### 🔍 Listar compras de um cliente específico
+GET http://localhost:3000/compras?cliente_id=1
+
+### 🔍 Filtrar produtos por preço (entre R$100 e R$200)
+GET http://localhost:3000/produtos?preco_min=100&preco_max=200
