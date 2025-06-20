@@ -52,24 +52,77 @@ node server.js
 7. A URL base da API:
 http://localhost:3000
 
-8. Estrutura do projeto no Visual Studio Code:
-api-rest/
-│
-├── models/                  ← Modelos Sequelize (definem as tabelas)
-│   ├── cliente.js           ← Modelo Cliente
-│   ├── produto.js           ← Modelo Produto
-│   └── compra.js            ← Modelo Compra
-│
-├── routes/                  ← Rotas da API
-│   ├── clientes.js          ← Endpoints /clientes
-│   ├── produtos.js          ← Endpoints /produtos
-│   └── compras.js           ← Endpoints /compras
-│
-├── database.js              ← Conexão com o SQLite usando Sequelize
-├── server.js                ← Arquivo principal que sobe a API
-├── package.json             ← Configuração do projeto e dependências
-├── package-lock.json        ← (Gerado automaticamente pelo npm)
-└── database.sqlite          ← (Gerado automaticamente pelo Sequelize)
+Banco de dados sqlite
+--------------
+8. Como instalar a extensão REST Client no Visual Studio Code.
+🔹 1. Abrir o Visual Studio Code
+🔹 2. Ir até o menu de extensões
+Clique no ícone de quadrado com 4 blocos na barra lateral esquerda
+ou pressione Ctrl+Shift+X.
+🔹 3. Buscar pela extensão
+Digite no campo de busca:
+REST Client
+Ela aparecerá com o autor "Huachao Mao".
+🔹 4. Clique em Instalar
+Aguarde a instalação.
+
+9. Criar o arquivo testes.http que irá criar os dados no banco de dados.
+
+10. Como usar o REST Client
+Abra o arquivo no Visual Studio Code.
+Clique em "Send Request" acima de cada requisição para incluir os dados.
+
+testes.http
+-----------
+### ✅ Criar cliente
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+  "nome": "Maria Oliveira",
+  "email": "maria@email.com",
+  "senha": "senha123"
+}
+
+### 🔍 Listar clientes
+GET http://localhost:3000/clientes
+
+###
+
+### ✅ Criar produto
+POST http://localhost:3000/produtos
+Content-Type: application/json
+
+{
+  "nome": "Mouse Gamer",
+  "descricao": "Mouse com sensor óptico e iluminação RGB",
+  "preco": 150.00
+}
+
+### 🔍 Listar produtos
+GET http://localhost:3000/produtos
+
+###
+
+### ✅ Criar compra (verifique os IDs antes)
+POST http://localhost:3000/compras
+Content-Type: application/json
+
+{
+  "cliente_id": 1,
+  "produto_id": 1
+}
+
+### 🔍 Listar todas as compras
+GET http://localhost:3000/compras
+
+### 🔍 Listar compras de um cliente específico
+GET http://localhost:3000/compras?cliente_id=1
+
+### 🔍 Filtrar produtos por preço (entre R$100 e R$200)
+GET http://localhost:3000/produtos?preco_min=100&preco_max=200
+
+
 
 Criado por:
 -----------
