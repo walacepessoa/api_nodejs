@@ -11,6 +11,10 @@ Acesse: https://nodejs.org
 Baixe a versão LTS (recomendada).
 Instale normalmente (next, next, install...).
 
+2. Instalar o Visual Studio Code
+Baixe em: https://code.visualstudio.com
+Instale e abra o Visual Studio Code.
+
 🔍 Verifique a instalação:
 No Visual Studio Code, vá em:
 Terminal > Novo Terminal
@@ -19,11 +23,7 @@ Abra o terminal (Visual Studio Code ou Git Bash) e digite:
 node -v
 npm -v
 
-2. Instalar o Visual Studio Code
-Baixe em: https://code.visualstudio.com
-Instale e abra o Visual Studio Code.
-
-3. Configurar o terminal com Git Bash (opcional, mas útil)
+4. Configurar o terminal com Git Bash (opcional, mas útil)
 🔧 Passos:
 Instale o Git: https://git-scm.com/downloads
 No Visual Studio Code, vá em:
