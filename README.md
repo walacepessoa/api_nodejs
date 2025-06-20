@@ -46,35 +46,9 @@ Cria um package.json básico.
 5. Instalar os pacotes Express, sequelize e também o driver do banco SQLite:
 npm install express sequelize sqlite3 body-parser
 
-6. Criar a estrutura de arquivos:
-api-rest/
-│
-├── models/                  ← Modelos Sequelize (definem as tabelas)
-│   ├── cliente.js           ← Modelo Cliente
-│   ├── produto.js           ← Modelo Produto
-│   └── compra.js            ← Modelo Compra
-│
-├── routes/                  ← Rotas da API
-│   ├── clientes.js          ← Endpoints /clientes
-│   ├── produtos.js          ← Endpoints /produtos
-│   └── compras.js           ← Endpoints /compras
-│
-├── database.js              ← Conexão com o SQLite usando Sequelize
-├── server.js                ← Arquivo principal que sobe a API
-├── package.json             ← Configuração do projeto e dependências
-├── package-lock.json        ← (Gerado automaticamente pelo npm)
-└── database.sqlite          ← (Gerado automaticamente pelo Sequelize)
-└── testes.http              ← Arquivo post para inclusão dos dados no banco
-
-7. Iniciar o servidor:
-node server.js
-
-8. A URL base da API:
-http://localhost:3000
-
 Banco de dados sqlite
 --------------
-9. Como instalar a extensão REST Client no Visual Studio Code.
+6. Como instalar a extensão REST Client no Visual Studio Code.
 🔹 1. Abrir o Visual Studio Code
 🔹 2. Ir até o menu de extensões
 Clique no ícone de quadrado com 4 blocos na barra lateral esquerda
@@ -86,12 +60,7 @@ Ela aparecerá com o autor "Huachao Mao".
 🔹 4. Clique em Instalar
 Aguarde a instalação.
 
-10. Criar o arquivo testes.http que irá criar os dados no banco de dados.
-
-11. Como usar o REST Client
-Abra o arquivo no Visual Studio Code.
-Clique em "Send Request" acima de cada requisição para incluir os dados.
-
+7. Criar o arquivo testes.http que irá criar os dados no banco de dados.
 testes.http
 -----------
 ### ✅ Criar cliente
@@ -142,6 +111,35 @@ GET http://localhost:3000/compras?cliente_id=1
 ### 🔍 Filtrar produtos por preço (entre R$100 e R$200)
 GET http://localhost:3000/produtos?preco_min=100&preco_max=200
 
+8. Como usar o REST Client
+Abra o testes.http arquivo no Visual Studio Code.
+Clique em "Send Request" acima de cada requisição para incluir os dados.
+
+9. Iniciar o servidor:
+node server.js
+
+10. A URL base da API:
+http://localhost:3000
+
+11. Estrutura do projeto
+api-rest/
+│
+├── models/                  ← Modelos Sequelize (definem as tabelas)
+│   ├── cliente.js           ← Modelo Cliente
+│   ├── produto.js           ← Modelo Produto
+│   └── compra.js            ← Modelo Compra
+│
+├── routes/                  ← Rotas da API
+│   ├── clientes.js          ← Endpoints /clientes
+│   ├── produtos.js          ← Endpoints /produtos
+│   └── compras.js           ← Endpoints /compras
+│
+├── database.js              ← Conexão com o SQLite usando Sequelize
+├── server.js                ← Arquivo principal que sobe a API
+├── testes.http              ← Arquivo post para indlusão dos dados no banco
+├── package.json             ← Configuração do projeto e dependências
+├── package-lock.json        ← (Gerado automaticamente pelo npm)
+└── database.sqlite          ← (Gerado automaticamente pelo Sequelize)
 
 
 Criado por:
