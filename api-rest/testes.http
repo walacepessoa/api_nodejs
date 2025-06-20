@@ -8,11 +8,6 @@ Content-Type: application/json
   "senha": "1000"
 }
 
-### 🔍 Listar clientes
-GET http://localhost:3000/clientes
-
-###
-
 ### ✅ Criar produto
 POST http://localhost:3000/produtos
 Content-Type: application/json
@@ -22,11 +17,6 @@ Content-Type: application/json
   "descricao": "Plano com desconto de 10%",
   "preco": 150.00
 }
-
-### 🔍 Listar produtos
-GET http://localhost:3000/produtos
-
-###
 
 ### ✅ Criar compra (verifique os IDs antes)
 POST http://localhost:3000/compras
