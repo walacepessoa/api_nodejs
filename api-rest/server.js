@@ -39,3 +39,9 @@ sequelize.sync().then(() => {
     console.log('Servidor rodando em http://localhost:3000');
   });
 });
+
+// Tratamento de erros
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Algo deu errado!');
+});
