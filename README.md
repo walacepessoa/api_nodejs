@@ -1,5 +1,6 @@
-Descrição:
+API node js
 ----------
+API REST desenvolvida em node js,
 Projeto de criação de uma api rest em node js com Visual Studio Code.
 
 Instalação, configuração e execução:
