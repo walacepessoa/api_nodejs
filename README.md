@@ -1,7 +1,6 @@
 API node js
 ----------
-API REST desenvolvida em node js,
-Projeto de criação de uma api rest em node js com Visual Studio Code.
+API REST desenvolvida em node js que retorna clientes, produtos e compras
 
 Instalação, configuração e execução:
 ------------------------------------
