@@ -1,8 +1,20 @@
 API node js
 ----------
-API REST desenvolvida em node js que retorna clientes, produtos e compras
 <p>
-<h4>Instalação, configuração e execução:</h4>
+📌 Projeto: api-rest<br/>
+Descrição:<br/>
+API REST desenvolvida em Node.js que disponibiliza dados de clientes, produtos e compras via endpoints RESTful. Ideal para integração com aplicações frontend e serviços externos, fornecendo dados estruturados em JSON.<br/>
+<br/>
+🚀 Tecnologias utilizadas<br/>
+<br/>
+Node.js<br/>
+Express.js<br/>
+JSON<br/>
+Git<br/>
+VS Code<br/>
+</p>
+<p>
+<h4>✅ Instalação, configuração e execução:</h4>
 </p>
 <p>
 1. Instalar o Node.js<br/>
@@ -141,12 +153,10 @@ api-rest/<br/>
 │   ├── cliente.js           ← Modelo Cliente<br/>
 │   ├── produto.js           ← Modelo Produto<br/>
 │   └── compra.js            ← Modelo Compra<br/>
-│<br/>
 ├── routes/                  ← Rotas da API<br/>
 │   ├── clientes.js          ← Endpoints /clientes<br/>
 │   ├── produtos.js          ← Endpoints /produtos<br/>
 │   └── compras.js           ← Endpoints /compras<br/>
-│<br/>
 ├── database.js              ← Conexão com o SQLite usando Sequelize<br/>
 ├── server.js                ← Arquivo principal que sobe a API<br/>
 ├── testes.http              ← Arquivo post para indlusão dos dados no banco<br/>
